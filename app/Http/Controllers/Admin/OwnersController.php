@@ -12,15 +12,13 @@ use Illuminate\Support\Facades\Hash;
 use Throwable;
 use Illuminate\Support\Facades\Log;
 
-
-
 class OwnersController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth:admin');
     }
-
+        
     public function index()
     {
         // $date_now = Carbon::now();
@@ -39,7 +37,6 @@ class OwnersController extends Controller
         //var_dump($q_first);
 
         //dd($e_all, $q_get, $q_first, $c_test);
-
         $owners = Owner::select('id', 'name', 'email', 'created_at')
         ->paginate(3);
 

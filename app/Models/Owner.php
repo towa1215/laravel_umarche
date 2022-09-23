@@ -8,8 +8,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Shop;
 
-
-
 class Owner extends Authenticatable
 {
     use HasFactory, SoftDeletes;
