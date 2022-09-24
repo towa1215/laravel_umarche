@@ -22,11 +22,11 @@ class ShopController extends Controller
             // dd(Auth::id()); //数字
 
             $id = $request->route()->parameter('shop'); //shopのid取得
-            if(!is_null($id)){ // null判定
+            if(!is_null($id)){ //null判定
             $shopsOwnerId = Shop::findOrFail($id)->owner->id;
-                $shopId = (int)$shopsOwnerId; // キャスト 文字列→数値に型変換
+                $shopId = (int)$shopsOwnerId; // キャスト　文字列→数値に型変換
                 $ownerId = Auth::id();
-                if($shopId !== $ownerId){ // 同じでなかったら
+                if($shopId !== $ownerId){ //同じでなかったら
                     abort(404); // 404画面表示
                 }
             }
@@ -37,7 +37,7 @@ class ShopController extends Controller
     public function index()
     {
 
-        //$ownerId = Auth::id();
+        // $ownerId = Auth::id();
         $shops = Shop::where('owner_id', Auth::id())->get();
 
         return view('owner.shops.index', 
@@ -46,9 +46,7 @@ class ShopController extends Controller
 
     public function edit($id)
     {
-        $shop = Shop::findOrFail($id);
-        // dd(Shop::findOrFail($id));
-        return view('owner.shops.edit', compact('shop'));
+        dd(Shop::findOrFail($id));
     }
 
     public function update( $request, $id)
