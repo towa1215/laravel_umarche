@@ -33,7 +33,6 @@ Route::prefix('shops')->
         Route::post('update/{shop}', [ShopController::class, 'update'])->name('shops.update');
     });
 
-
 Route::get('/dashboard', function () {
     return view('owner.dashboard');
 })->middleware(['auth:owners'])->name('dashboard');
