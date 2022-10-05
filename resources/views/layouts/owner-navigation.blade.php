@@ -9,7 +9,7 @@
                     <a href="{{ route('owner.dashboard') }}">
                         <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
                     </a>
-                    </div>
+                </div>
                 </div>
 
                 <!-- Navigation Links -->
@@ -22,6 +22,9 @@
                     </x-nav-link>
                     <x-nav-link :href="route('owner.images.index')" :active="request()->routeIs('owner.images.index')">
                         画像管理
+                    </x-nav-link>
+                    <x-nav-link :href="route('owner.products.index')" :active="request()->routeIs('owner.products.index')">
+                        商品管理
                     </x-nav-link>
                 </div>
             </div>
@@ -79,6 +82,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('owner.images.index')" :active="request()->routeIs('owner.images.index')">
                 画像管理
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('owner.products.index')" :active="request()->routeIs('owner.products.index')">
+                商品管理
             </x-responsive-nav-link>
         </div>
 
