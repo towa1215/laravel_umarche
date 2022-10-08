@@ -12,6 +12,8 @@ use App\Models\Stock;
 use App\Models\Shop;
 use App\Models\PrimaryCategory;
 use App\Models\Owner;
+use Illuminate\Support\Facades\Log;
+use Throwable;
 
 class ProductController extends Controller
 {
