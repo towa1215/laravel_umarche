@@ -89,7 +89,7 @@ class ProductController extends Controller
         // dd($request)
         $request->validate([
             'name' => 'required|string|max:50',
-            'infomation' => 'required|string|max:1000',
+            'information' => 'required|string|max:1000',
             'price' => 'required|integer',
             'sort_order' => 'nullable|integer',
             'quantity' => 'required|integer',
@@ -99,7 +99,7 @@ class ProductController extends Controller
             'image2' => 'nullable|exists:images,id',
             'image3' => 'nullable|exists:images,id',
             'image4' => 'nullable|exists:images,id',
-            'ise_selling' => 'required'
+            'is_selling' => 'required'
         ]);
 
         try{
