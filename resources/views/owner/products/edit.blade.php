@@ -131,6 +131,7 @@
         MicroModal.close(modal);
     }, )
     })  
+    
     function deletePost(e) {
         'use strict';
         if (confirm('本当に削除してもいいですか?')) {
