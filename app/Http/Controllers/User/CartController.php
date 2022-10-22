@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use App\Jobs\SendOrderedMail;
 use Illuminate\Http\Request;
 use App\Models\Cart;
 use App\Models\User;
