@@ -10,7 +10,6 @@ class CartService
     {
         $products = [];
 
-        //dd($items);
         foreach($items as $item)
         {
             $p = Product::findOrFail($item->product_id);
@@ -19,7 +18,6 @@ class CartService
             $keys = ['ownerName', 'email'];
             $ownerInfo = array_combine($keys, $values);   // オーナー情報のキーを変更
             
-
             $product = Product::where('id', $item->product_id)
             ->select('id', 'name', 'price')->get()->toArray(); // 商品情報の配列
 
@@ -31,7 +29,7 @@ class CartService
             array_push($products, $result); //配列に追加
 
         }
-        //dd($products);
+        // dd($products);
         return $products;
     }
 }
